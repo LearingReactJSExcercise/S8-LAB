@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>What do you wanna do?</h1>
+      <p id="actions">
+        <button onclick={handleHelloClick} id="helloButon">Say Hello</button>
+        <button id="pnButon">Say PN</button>
+        <button onclick="console.log('hi')" id="vietnamButton">Say Vietnam</button>
+      </p>
+    </div>
+    <script>
+      // 1 - Create a function to handle event
+      function handleHelloClick(event) {
+        console.log("Hello");
+      }
+            
+      // 2 - Get DOM element
+      let helloButon = document.getElementById("helloButon");
+
+      // 3 - Bind element event to the handler function
+      helloButon.addEventListener("click", handleHelloClick);
+
+    
+    </script>
+  </body>
+</html>
