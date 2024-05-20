@@ -15,7 +15,7 @@ export default function App() {
       setPrice(price * 0.75);
   }
   return (
-    <div id="app" class="no-discount">
+    <div id="app" className={`${isDiscounted ? 'discount' : 'no-discount'}`}>
       <p>$ {price}</p>
       <p>{isDiscounted ? 'Discounted !' : 'No Discount' } </p>
       {!isDiscounted &&  <button onClick={handleDiscount}>  Apply Discount </button> } 
